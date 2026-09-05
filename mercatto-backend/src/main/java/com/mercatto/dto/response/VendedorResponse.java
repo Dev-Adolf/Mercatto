@@ -1,0 +1,76 @@
+package com.mercatto.dto.response;
+
+import java.time.LocalDateTime;
+
+public class VendedorResponse {
+    private Long id;
+    private Long usuarioId;
+    private String email;
+    private String nombrePropietario;
+    private String nombreTienda;
+    private String descripcion;
+    private String logoUrl;
+    private String tipo;
+    private String estado;
+    private String nitCedula;
+    private String razonSocial;
+    private String ciudad;
+    private String direccion;
+    private Double calificacion;
+    private Integer totalVentas;
+    private Double ingresosTotales;
+    private LocalDateTime fechaRegistro;
+
+    public VendedorResponse() {}
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public Long getUsuarioId() { return usuarioId; }
+    public void setUsuarioId(Long usuarioId) { this.usuarioId = usuarioId; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+
+    public String getNombrePropietario() { return nombrePropietario; }
+    public void setNombrePropietario(String nombrePropietario) { this.nombrePropietario = nombrePropietario; }
+
+    public String getNombreTienda() { return nombreTienda; }
+    public void setNombreTienda(String nombreTienda) { this.nombreTienda = nombreTienda; }
+
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+
+    public String getLogoUrl() { return logoUrl; }
+    public void setLogoUrl(String logoUrl) { this.logoUrl = logoUrl; }
+
+    public String getTipo() { return tipo; }
+    public void setTipo(String tipo) { this.tipo = tipo; }
+
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
+
+    public String getNitCedula() { return nitCedula; }
+    public void setNitCedula(String nitCedula) { this.nitCedula = nitCedula; }
+
+    public String getRazonSocial() { return razonSocial; }
+    public void setRazonSocial(String razonSocial) { this.razonSocial = razonSocial; }
+
+    public String getCiudad() { return ciudad; }
+    public void setCiudad(String ciudad) { this.ciudad = ciudad; }
+
+    public String getDireccion() { return direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
+
+    public Double getCalificacion() { return calificacion; }
+    public void setCalificacion(Double calificacion) { this.calificacion = calificacion; }
+
+    public Integer getTotalVentas() { return totalVentas; }
+    public void setTotalVentas(Integer totalVentas) { this.totalVentas = totalVentas; }
+
+    public Double getIngresosTotales() { return ingresosTotales; }
+    public void setIngresosTotales(Double ingresosTotales) { this.ingresosTotales = ingresosTotales; }
+
+    public LocalDateTime getFechaRegistro() { return fechaRegistro; }
+    public void setFechaRegistro(LocalDateTime fechaRegistro) { this.fechaRegistro = fechaRegistro; }
+}
