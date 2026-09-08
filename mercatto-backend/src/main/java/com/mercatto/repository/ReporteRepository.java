@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ReporteRepository extends JpaRepository<Reporte, Long> {
-    Page<Reporte> findByUsuarioOrderByFechaCreacionDesc(Usuario usuario, Pageable pageable);
+    Page<Reporte> findByReportanteOrderByFechaCreacionDesc(Usuario reportante, Pageable pageable);
     Page<Reporte> findByEstadoOrderByFechaCreacionDesc(Reporte.EstadoReporte estado, Pageable pageable);
     long countByEstado(Reporte.EstadoReporte estado);
 }

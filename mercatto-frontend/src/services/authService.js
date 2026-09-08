@@ -11,6 +11,12 @@ export const authService = {
     return res.data
   },
 
+  // credential = el ID Token (JWT) que entrega Google Identity Services
+  loginGoogle: async (credential) => {
+    const res = await api.post('/auth/google', { credential })
+    return res.data
+  },
+
   logout: async () => {
     try {
       await api.post('/auth/logout')

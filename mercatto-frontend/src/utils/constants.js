@@ -1,5 +1,8 @@
 export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api'
 
+// Debe coincidir EXACTAMENTE con google.client-id en application.properties del backend
+export const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || ''
+
 export const ROLES = {
   COMPRADOR: 'COMPRADOR',
   VENDEDOR: 'VENDEDOR',

@@ -4,6 +4,7 @@ import { useAuth } from '../hooks/useAuth'
 import { useToast } from '../hooks/useToast'
 import Input from '../components/common/Input'
 import Button from '../components/common/Button'
+import GoogleLoginButton from '../components/common/GoogleLoginButton'
 import { User, Mail, Lock, Store, Building, MapPin } from 'lucide-react'
 
 export const Registro = () => {
@@ -21,9 +22,22 @@ export const Registro = () => {
   const [ciudad, setCiudad] = useState('')
 
   const [loading, setLoading] = useState(false)
-  const { registro } = useAuth()
+  const { registro, loginGoogle } = useAuth()
   const { success, error, info } = useToast()
   const navigate = useNavigate()
+
+  const handleGoogle = async (credential) => {
+    setLoading(true)
+    const res = await loginGoogle(credential)
+    setLoading(false)
+
+    if (res?.exito) {
+      success('¡Cuenta creada con Google! Bienvenido a Mercatto.')
+      navigate('/')
+    } else {
+      error(res?.mensaje || 'No se pudo continuar con Google')
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -170,6 +184,17 @@ export const Registro = () => {
             {rol === 'VENDEDOR' ? 'Enviar Solicitud de Tienda' : 'Crear Cuenta de Comprador'}
           </Button>
         </form>
+
+        {rol === 'COMPRADOR' && (
+          <>
+            <div className="flex items-center gap-3">
+              <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800" />
+              <span className="text-xs text-slate-400">o</span>
+              <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800" />
+            </div>
+            <GoogleLoginButton onCredential={handleGoogle} texto="signup_with" />
+          </>
+        )}
 
         <div className="text-center pt-2 text-xs text-slate-500">
           ¿Ya tienes una cuenta?{' '}

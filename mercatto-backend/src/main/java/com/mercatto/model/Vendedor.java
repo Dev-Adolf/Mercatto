@@ -50,7 +50,7 @@ public class Vendedor {
     @Column(length = 100)
     private String banco;
 
-    @Column(precision = 3, scale = 2)
+    @Column
     private Double calificacion = 0.0;
 
     @Column(name = "total_ventas")

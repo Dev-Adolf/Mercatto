@@ -17,7 +17,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -31,6 +33,7 @@ public class PedidoService {
     @Autowired private DireccionRepository direccionRepo;
     @Autowired private CuponRepository cuponRepo;
     @Autowired private PagoRepository pagoRepo;
+    @Autowired private EmailService emailService;
 
     @Transactional
     public PedidoResponse crearPedido(PedidoRequest req, Usuario comprador) {
@@ -170,7 +173,52 @@ public class PedidoService {
         pagoRepo.save(pago);
         guardado.setPago(pago);
 
+        notificarPedidoPorCorreo(guardado, comprador, items, subtotal, descuento, costoEnvio, total);
+
         return convertirAResponse(guardado);
+    }
+
+    // ── Notificaciones por correo (comprador + cada vendedor) ─────────
+    private void notificarPedidoPorCorreo(Pedido pedido, Usuario comprador, List<PedidoItem> items,
+                                           double subtotal, double descuento, double costoEnvio, double total) {
+        // Correo al comprador con el detalle completo
+        String filasComprador = items.stream().map(this::filaHtml).collect(Collectors.joining());
+        if (comprador.getEmail() != null) {
+            emailService.enviarConfirmacionPedidoComprador(
+                    comprador.getEmail(), comprador.getNombre(), pedido.getCodigo(),
+                    filasComprador, subtotal, descuento, costoEnvio, total);
+        }
+
+        // Un correo por cada vendedor involucrado, solo con sus propios ítems
+        Map<Long, List<PedidoItem>> itemsPorVendedor = new LinkedHashMap<>();
+        for (PedidoItem item : items) {
+            itemsPorVendedor
+                .computeIfAbsent(item.getVendedor().getId(), k -> new ArrayList<>())
+                .add(item);
+        }
+
+        for (List<PedidoItem> itemsVendedor : itemsPorVendedor.values()) {
+            Vendedor vendedor = itemsVendedor.get(0).getVendedor();
+            String emailVendedor = vendedor.getUsuario() != null ? vendedor.getUsuario().getEmail() : null;
+            if (emailVendedor == null) continue;
+
+            String filasVendedor = itemsVendedor.stream().map(this::filaHtml).collect(Collectors.joining());
+            double totalVendedor = itemsVendedor.stream().mapToDouble(PedidoItem::getSubtotal).sum();
+
+            emailService.enviarNotificacionNuevaVenta(
+                    emailVendedor, vendedor.getNombreTienda(), pedido.getCodigo(),
+                    filasVendedor, totalVendedor);
+        }
+    }
+
+    private String filaHtml(PedidoItem item) {
+        String nombre = item.getNombreProducto()
+                + (item.getNombreVariante() != null ? " (" + item.getNombreVariante() + ")" : "");
+        return String.format(
+            "<tr><td style=\"padding:8px;border-top:1px solid #e2e8f0\">%s</td>" +
+            "<td style=\"padding:8px;border-top:1px solid #e2e8f0\">%d</td>" +
+            "<td style=\"padding:8px;border-top:1px solid #e2e8f0\">$%,.0f</td></tr>",
+            nombre, item.getCantidad(), item.getSubtotal());
     }
 
     public Page<PedidoResponse> listarPorComprador(Usuario comprador, int pagina, int tamano) {

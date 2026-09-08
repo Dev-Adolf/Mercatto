@@ -7,12 +7,14 @@ CREATE TABLE IF NOT EXISTS usuarios (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255) NULL,
     rol VARCHAR(20) NOT NULL DEFAULT 'COMPRADOR',
     activo BOOLEAN NOT NULL DEFAULT TRUE,
     email_verificado BOOLEAN NOT NULL DEFAULT FALSE,
     foto_perfil VARCHAR(500),
     telefono VARCHAR(20),
+    proveedor VARCHAR(20) NOT NULL DEFAULT 'LOCAL',
+    google_id VARCHAR(100),
     fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
     ultimo_login DATETIME
 );

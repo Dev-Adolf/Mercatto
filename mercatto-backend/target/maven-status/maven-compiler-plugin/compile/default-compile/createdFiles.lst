@@ -24,6 +24,7 @@ com\mercatto\controller\AdminController.class
 com\mercatto\exception\UnauthorizedException.class
 com\mercatto\controller\FavoritoController.class
 com\mercatto\service\PagoService.class
+com\mercatto\model\Usuario$Proveedor.class
 com\mercatto\dto\request\CuponRequest.class
 com\mercatto\model\Reporte$MotivoReporte.class
 com\mercatto\dto\response\AuthResponse.class
@@ -34,6 +35,7 @@ com\mercatto\model\Reporte$EstadoReporte.class
 com\mercatto\service\AdminService.class
 com\mercatto\service\ProductoService.class
 com\mercatto\repository\UsuarioRepository.class
+com\mercatto\service\GoogleTokenService.class
 com\mercatto\dto\request\ProductoRequest.class
 com\mercatto\dto\response\ProductoResponse.class
 com\mercatto\dto\request\RegistroRequest$DatosVendedorRequest.class
@@ -49,8 +51,10 @@ com\mercatto\dto\response\AuthResponse$UsuarioInfo.class
 com\mercatto\dto\request\MensajeRequest.class
 com\mercatto\dto\request\ProductoRequest$ImagenDTO.class
 com\mercatto\repository\ProductoImagenRepository.class
+com\mercatto\service\GoogleTokenService$GooglePayload.class
 com\mercatto\security\JwtFilter.class
 com\mercatto\repository\MensajeContactoRepository.class
+com\mercatto\controller\TestEmailController.class
 com\mercatto\model\Pedido.class
 com\mercatto\model\Vendedor$Estado.class
 com\mercatto\repository\PagoRepository.class
@@ -66,6 +70,7 @@ com\mercatto\dto\response\StatsResponse.class
 com\mercatto\model\ProductoVariante.class
 com\mercatto\repository\FavoritoRepository.class
 com\mercatto\service\StripeService.class
+com\mercatto\dto\request\GoogleAuthRequest.class
 com\mercatto\model\Resena.class
 com\mercatto\service\CategoriaService.class
 com\mercatto\dto\request\PedidoRequest.class

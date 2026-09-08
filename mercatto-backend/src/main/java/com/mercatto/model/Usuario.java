@@ -17,7 +17,7 @@ public class Usuario {
     @Column(nullable = false, unique = true, length = 150)
     private String email;
 
-    @Column(name = "password_hash", nullable = false)
+    @Column(name = "password_hash", nullable = true)
     private String password;
 
     @Enumerated(EnumType.STRING)
@@ -36,6 +36,13 @@ public class Usuario {
     @Column(length = 20)
     private String telefono;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 20)
+    private Proveedor proveedor = Proveedor.LOCAL;
+
+    @Column(name = "google_id", length = 100)
+    private String googleId;
+
     @Column(name = "fecha_registro")
     private LocalDateTime fechaRegistro;
 
@@ -51,6 +58,10 @@ public class Usuario {
 
     public enum Rol {
         COMPRADOR, VENDEDOR, ADMIN
+    }
+
+    public enum Proveedor {
+        LOCAL, GOOGLE
     }
 
     // Getters and Setters
@@ -80,6 +91,12 @@ public class Usuario {
 
     public String getTelefono() { return telefono; }
     public void setTelefono(String telefono) { this.telefono = telefono; }
+
+    public Proveedor getProveedor() { return proveedor; }
+    public void setProveedor(Proveedor proveedor) { this.proveedor = proveedor; }
+
+    public String getGoogleId() { return googleId; }
+    public void setGoogleId(String googleId) { this.googleId = googleId; }
 
     public LocalDateTime getFechaRegistro() { return fechaRegistro; }
     public void setFechaRegistro(LocalDateTime fechaRegistro) { this.fechaRegistro = fechaRegistro; }

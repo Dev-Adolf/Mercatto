@@ -1,87 +1,90 @@
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\ProductoVariante.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\MensajeRequest.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Producto.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\PedidoService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\config\SecurityConfig.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\AdminController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Vendedor.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\CarritoItem.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\MensajeContactoController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\PedidoItemRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\CloudinaryService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\util\SlugUtil.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\MensajeContacto.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\CategoriaController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\exception\GlobalExceptionHandler.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\PagoService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Usuario.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Categoria.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\CuponRequest.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\RegistroRequest.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\security\UserDetailsServiceImpl.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\security\JwtUtil.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\StripeService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\exception\UnauthorizedException.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\VendedorRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\CategoriaRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\FavoritoRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\ResenaRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\AuthService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\VendedorController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\StatsResponse.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\VendedorService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\exception\BadRequestException.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\AuthResponse.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\DireccionController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Pago.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\ReporteRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\PedidoItem.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\FavoritoController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\ProductoService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\AdminService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\MensajeContactoService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\UsuarioRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Favorito.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\config\StripeConfig.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\security\UserDetailsImpl.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\PedidoController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\config\JwtConfig.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\ProductoImagenRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\PagoRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\LoginRequest.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\AuthController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\CuponController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\PagoController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\RefreshToken.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\PedidoRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\VendedorResponse.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\DireccionRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\PedidoRequest.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Pedido.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Resena.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\VarianteAtributo.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\CuponRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\RefreshTokenRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\VarianteRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\CuponService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\config\CorsConfig.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\util\PaginacionUtil.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\ProductoImagen.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\CategoriaService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\PedidoResponse.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\exception\ResourceNotFoundException.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\MensajeContactoRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\service\EmailService.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\ResenaRequest.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Direccion.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\CarritoItemRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\MercattoApplication.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Cupon.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\ReporteController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\security\JwtFilter.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\ResenaController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Reporte.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\ProductoRequest.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\ProductoRepository.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\ProductoController.java
-c:\Users\FERNANDO BARBOZA\Desktop\cosas\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\ProductoResponse.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\ProductoService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\CloudinaryService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\MensajeContacto.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\PedidoItem.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\config\SecurityConfig.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\AuthService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\GoogleAuthRequest.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\security\JwtUtil.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\VendedorService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\DireccionRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Direccion.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\PedidoRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\CuponRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Resena.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\config\CorsConfig.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\exception\GlobalExceptionHandler.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\exception\UnauthorizedException.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\RefreshToken.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\VarianteRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\security\UserDetailsImpl.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Reporte.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\AdminController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\PedidoResponse.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\CategoriaRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\VarianteAtributo.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\ProductoVariante.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\StripeService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\MensajeRequest.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\ProductoImagenRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\ProductoController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\CarritoItem.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\ReporteController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\ProductoRequest.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\ResenaController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\exception\ResourceNotFoundException.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\AuthResponse.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\ProductoResponse.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Vendedor.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\CategoriaController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Usuario.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\ProductoImagen.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\ProductoRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\EmailService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\PedidoService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\AuthController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\MensajeContactoService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Categoria.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\CategoriaService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Pago.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\PagoController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\StatsResponse.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\PagoService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\PedidoItemRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\MensajeContactoController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\util\PaginacionUtil.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\PedidoRequest.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\TestEmailController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\RefreshTokenRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\DireccionController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\CarritoItemRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\PagoRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\RegistroRequest.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\MercattoApplication.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\MensajeContactoRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\security\JwtFilter.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\AdminService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\LoginRequest.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\util\SlugUtil.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\exception\BadRequestException.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\CuponService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\service\GoogleTokenService.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\response\VendedorResponse.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\VendedorRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\config\StripeConfig.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\ResenaRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Favorito.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\config\JwtConfig.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\VendedorController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\ResenaRequest.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\ReporteRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\FavoritoRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\dto\request\CuponRequest.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\FavoritoController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Cupon.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\CuponController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\repository\UsuarioRepository.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Producto.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\security\UserDetailsServiceImpl.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\controller\PedidoController.java
+C:\Users\gjgh2\Downloads\mercatto\mercatto\mercatto-backend\src\main\java\com\mercatto\model\Pedido.java

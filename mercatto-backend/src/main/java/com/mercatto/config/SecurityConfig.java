@@ -39,10 +39,11 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 // Rutas públicas de lectura y autenticación
                 .requestMatchers(
-                    "/api/auth/**",
-                    "/api/categorias/**",
-                    "/api/cupones/validar",
-                    "/uploads/**"
+                "/api/auth/**",
+                "/api/categorias/**",
+                "/api/cupones/validar",
+                "/api/test/**",
+                "/uploads/**"
                 ).permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/productos/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/resenas/producto/**").permitAll()

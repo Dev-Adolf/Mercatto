@@ -60,7 +60,7 @@ public class Producto {
     @Column(nullable = false)
     private boolean destacado = false;
 
-    @Column(precision = 3, scale = 2)
+    @Column
     private Double calificacion = 0.0;
 
     @Column(name = "total_resenas")

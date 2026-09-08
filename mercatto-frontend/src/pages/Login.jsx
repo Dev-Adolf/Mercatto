@@ -4,17 +4,28 @@ import { useAuth } from '../hooks/useAuth'
 import { useToast } from '../hooks/useToast'
 import Input from '../components/common/Input'
 import Button from '../components/common/Button'
+import GoogleLoginButton from '../components/common/GoogleLoginButton'
 import { Mail, Lock, LogIn } from 'lucide-react'
 
 export const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
-  const { login } = useAuth()
+  const { login, loginGoogle } = useAuth()
   const { success, error } = useToast()
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const redirectUrl = searchParams.get('redirect') || '/'
+
+  const irSegunRol = (res) => {
+    if (res.usuario?.rol === 'VENDEDOR') {
+      navigate('/vendedor')
+    } else if (res.usuario?.rol === 'ADMIN') {
+      navigate('/admin')
+    } else {
+      navigate(redirectUrl)
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -24,15 +35,22 @@ export const Login = () => {
 
     if (res?.exito) {
       success('¡Bienvenido de vuelta a Mercatto!')
-      if (res.usuario?.rol === 'VENDEDOR') {
-        navigate('/vendedor')
-      } else if (res.usuario?.rol === 'ADMIN') {
-        navigate('/admin')
-      } else {
-        navigate(redirectUrl)
-      }
+      irSegunRol(res)
     } else {
       error(res?.mensaje || 'Error al iniciar sesión')
+    }
+  }
+
+  const handleGoogle = async (credential) => {
+    setLoading(true)
+    const res = await loginGoogle(credential)
+    setLoading(false)
+
+    if (res?.exito) {
+      success('¡Bienvenido a Mercatto!')
+      irSegunRol(res)
+    } else {
+      error(res?.mensaje || 'No se pudo iniciar sesión con Google')
     }
   }
 
@@ -71,6 +89,14 @@ export const Login = () => {
             <span>Ingresar</span>
           </Button>
         </form>
+
+        <div className="flex items-center gap-3">
+          <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800" />
+          <span className="text-xs text-slate-400">o</span>
+          <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800" />
+        </div>
+
+        <GoogleLoginButton onCredential={handleGoogle} texto="signin_with" />
 
         <div className="text-center pt-2 text-xs text-slate-500">
           ¿No tienes una cuenta aún?{' '}

@@ -23,9 +23,9 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
     @Query("SELECT COUNT(DISTINCT p) FROM Pedido p JOIN p.items item WHERE item.vendedor = :vendedor")
     long countByVendedor(@Param("vendedor") Vendedor vendedor);
 
-    @Query("SELECT COALESCE(SUM(item.subtotal), 0.0) FROM Pedido p JOIN p.items item WHERE item.vendedor = :vendedor AND p.estado != com.mercatto.model.Pedido.EstadoPedido.PENDIENTE AND p.estado != com.mercatto.model.Pedido.EstadoPedido.CANCELADO")
+    @Query("SELECT COALESCE(SUM(item.subtotal), 0.0) FROM Pedido p JOIN p.items item WHERE item.vendedor = :vendedor AND p.estado != com.mercatto.model.Pedido$EstadoPedido.PENDIENTE AND p.estado != com.mercatto.model.Pedido$EstadoPedido.CANCELADO")
     Double sumIngresosByVendedor(@Param("vendedor") Vendedor vendedor);
 
-    @Query("SELECT COALESCE(SUM(p.total), 0.0) FROM Pedido p WHERE p.estado != com.mercatto.model.Pedido.EstadoPedido.PENDIENTE AND p.estado != com.mercatto.model.Pedido.EstadoPedido.CANCELADO")
+    @Query("SELECT COALESCE(SUM(p.total), 0.0) FROM Pedido p WHERE p.estado != com.mercatto.model.Pedido$EstadoPedido.PENDIENTE AND p.estado != com.mercatto.model.Pedido$EstadoPedido.CANCELADO")
     Double sumIngresosTotales();
 }

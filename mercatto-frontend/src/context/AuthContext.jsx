@@ -50,6 +50,26 @@ export const AuthProvider = ({ children }) => {
     return { exito: false, mensaje: res?.mensaje || 'Error al iniciar sesión', pendiente: res?.pendiente }
   }
 
+  const loginGoogle = async (credential) => {
+    try {
+      const res = await authService.loginGoogle(credential)
+      if (res?.exito && res?.accessToken) {
+        localStorage.setItem('mercatto_token', res.accessToken)
+        if (res.refreshToken) localStorage.setItem('mercatto_refresh_token', res.refreshToken)
+        localStorage.setItem('mercatto_user', JSON.stringify(res.usuario))
+        setToken(res.accessToken)
+        setUsuario(res.usuario)
+        return { exito: true, usuario: res.usuario }
+      }
+      return { exito: false, mensaje: res?.mensaje || 'No se pudo iniciar sesión con Google', pendiente: res?.pendiente }
+    } catch (err) {
+      return {
+        exito: false,
+        mensaje: err?.response?.data?.mensaje || 'No se pudo iniciar sesión con Google',
+      }
+    }
+  }
+
   const registro = async (datos) => {
     const res = await authService.registro(datos)
     if (res?.exito && res?.accessToken) {
@@ -88,6 +108,7 @@ export const AuthProvider = ({ children }) => {
         esVendedor,
         esAdmin,
         login,
+        loginGoogle,
         registro,
         logout,
       }}

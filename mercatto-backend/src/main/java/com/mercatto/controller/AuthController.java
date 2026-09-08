@@ -1,5 +1,6 @@
 package com.mercatto.controller;
 
+import com.mercatto.dto.request.GoogleAuthRequest;
 import com.mercatto.security.JwtUtil;
 import com.mercatto.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,14 @@ public class AuthController {
     public ResponseEntity<?> login(@RequestBody Map<String, String> datos) {
         Map<String, Object> res = authService.login(
             datos.get("email"), datos.get("password"));
+        int status = Boolean.TRUE.equals(res.get("exito")) ? 200 : 401;
+        return ResponseEntity.status(status).body(res);
+    }
+
+    // POST /api/auth/google
+    @PostMapping("/google")
+    public ResponseEntity<?> google(@RequestBody GoogleAuthRequest datos) {
+        Map<String, Object> res = authService.loginConGoogle(datos.getCredential());
         int status = Boolean.TRUE.equals(res.get("exito")) ? 200 : 401;
         return ResponseEntity.status(status).body(res);
     }

@@ -21,6 +21,7 @@ public class AuthService {
     @Autowired private RefreshTokenRepository refreshRepo;
     @Autowired private PasswordEncoder passwordEncoder;
     @Autowired private JwtUtil jwtUtil;
+    @Autowired private GoogleTokenService googleTokenService;
 
     // ── Brute-force protection ────────────────────────────────────
     private static final int  MAX_INTENTOS = 5;
@@ -113,10 +114,18 @@ public class AuthService {
         }
 
         Optional<Usuario> opt = usuarioRepo.findByEmail(email);
-        if (opt.isEmpty() || !passwordEncoder.matches(password, opt.get().getPassword())) {
+        boolean credencialesValidas = opt.isPresent()
+                && opt.get().getPassword() != null
+                && passwordEncoder.matches(password, opt.get().getPassword());
+
+        if (!credencialesValidas) {
             registrarIntento(email, false);
             res.put("exito", false);
-            res.put("mensaje", "Correo o contraseña incorrectos.");
+            if (opt.isPresent() && opt.get().getPassword() == null) {
+                res.put("mensaje", "Esta cuenta fue creada con Google. Inicia sesión con el botón de Google.");
+            } else {
+                res.put("mensaje", "Correo o contraseña incorrectos.");
+            }
             return res;
         }
 
@@ -146,6 +155,68 @@ public class AuthService {
         res.put("accessToken", accessToken);
         res.put("refreshToken", refreshToken);
         res.put("usuario", usuarioAMapa(usuario));
+        return res;
+    }
+
+    // ── LOGIN / REGISTRO CON GOOGLE ──────────────────────────────────
+    @Transactional
+    public Map<String, Object> loginConGoogle(String idToken) {
+        Map<String, Object> res = new HashMap<>();
+
+        GoogleTokenService.GooglePayload datos = googleTokenService.verificar(idToken);
+
+        Optional<Usuario> opt = usuarioRepo.findByEmail(datos.email);
+        Usuario usuario;
+
+        if (opt.isPresent()) {
+            usuario = opt.get();
+
+            if (!usuario.isActivo()) {
+                if (usuario.getRol() == Usuario.Rol.VENDEDOR) {
+                    res.put("exito", false);
+                    res.put("pendiente", true);
+                    res.put("mensaje", "Tu cuenta está pendiente de aprobación.");
+                } else {
+                    res.put("exito", false);
+                    res.put("mensaje", "Tu cuenta está suspendida. Contacta al soporte.");
+                }
+                return res;
+            }
+
+            // Si el usuario ya existía con registro local, vinculamos su Google ID
+            if (usuario.getGoogleId() == null) {
+                usuario.setGoogleId(datos.sub);
+                if (usuario.getProveedor() == Usuario.Proveedor.LOCAL && usuario.getPassword() == null) {
+                    usuario.setProveedor(Usuario.Proveedor.GOOGLE);
+                }
+            }
+            if (!usuario.isEmailVerificado()) usuario.setEmailVerificado(true);
+            if (usuario.getFotoPerfil() == null && datos.foto != null) usuario.setFotoPerfil(datos.foto);
+        } else {
+            usuario = new Usuario();
+            usuario.setNombre(datos.nombre != null ? datos.nombre : datos.email);
+            usuario.setEmail(datos.email);
+            usuario.setPassword(null); // cuenta exclusiva de Google, sin contraseña local
+            usuario.setRol(Usuario.Rol.COMPRADOR);
+            usuario.setActivo(true);
+            usuario.setEmailVerificado(true);
+            usuario.setFotoPerfil(datos.foto);
+            usuario.setProveedor(Usuario.Proveedor.GOOGLE);
+            usuario.setGoogleId(datos.sub);
+        }
+
+        usuario.setUltimoLogin(LocalDateTime.now());
+        usuario = usuarioRepo.save(usuario);
+
+        String accessToken  = jwtUtil.generarAccessToken(usuario.getEmail(), usuario.getRol().name());
+        String refreshToken = jwtUtil.generarRefreshToken(usuario.getEmail());
+        guardarRefreshToken(usuario, refreshToken);
+
+        res.put("exito", true);
+        res.put("accessToken", accessToken);
+        res.put("refreshToken", refreshToken);
+        res.put("usuario", usuarioAMapa(usuario));
+        res.put("mensaje", "¡Bienvenido a Mercatto!");
         return res;
     }
 
